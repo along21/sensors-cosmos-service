@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.maven.doxia:doxia-module-xdoc:1.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.doxia/doxia-module-xdoc/jars/doxia-module-xdoc-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.doxia/doxia-module-xdoc/srcs/doxia-module-xdoc-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.mindscapehq:raygun4java-play2:2.2.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.mindscapehq/raygun4java-play2/jars/raygun4java-play2-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.mindscapehq/raygun4java-play2/srcs/raygun4java-play2-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

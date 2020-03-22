@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.microsoft.azure:azure-cosmosdb-commons:2.6.3:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.microsoft.azure/azure-cosmosdb-commons/jars/azure-cosmosdb-commons-2.6.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.microsoft.azure/azure-cosmosdb-commons/srcs/azure-cosmosdb-commons-2.6.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

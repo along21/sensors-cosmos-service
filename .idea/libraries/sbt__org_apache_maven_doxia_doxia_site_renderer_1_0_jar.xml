@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.maven.doxia:doxia-site-renderer:1.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.doxia/doxia-site-renderer/jars/doxia-site-renderer-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.doxia/doxia-site-renderer/srcs/doxia-site-renderer-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

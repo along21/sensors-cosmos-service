@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.mindscapehq:core:2.2.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.mindscapehq/core/jars/core-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.mindscapehq/core/srcs/core-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

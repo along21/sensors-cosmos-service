@@ -1,0 +1,87 @@
+{
+  "labels": {
+    "heimdall.path": "/sensors-cosmos",
+    "heimdall.options": "{\"forward_url\": \"http://dev-nginx.marathon.l4lb.thisdcos.directory/sensor-service\"}",
+    "heimdall.host": "mesosdev.az.corp.iofficecorp.com",
+    "heimdall.filters": "[\"Bifrost.AddDBInfoHeader\",\"Bifrost.AddAppInfoHeader\"]"
+  },
+  "id": "/microservices-dev/sensor-cosmos-service",
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "backoffFactor": 1.15,
+  "backoffSeconds": 1,
+  "constraints": [
+    [
+      "zone",
+      "IS",
+      "microservices"
+    ]
+  ],
+  "container": {
+    "portMappings": [
+      {
+        "containerPort": 9000,
+        "hostPort": 0,
+        "labels": {
+          "VIP_0": "/dev-sensor-cosmos-service:80"
+        },
+        "protocol": "tcp",
+        "servicePort": 10006,
+        "name": "dev-sensor-cosmos-service"
+      }
+    ],
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "ioreg.azurecr.io/sensor-cosmos-service:$build_id",
+      "forcePullImage": true,
+      "privileged": false,
+      "parameters": []
+    }
+  },
+  "env": {
+    "MESOS_URL": "http://mesosdev.az.corp.iofficecorp.com/service/nginx/dev",
+    "BIFROST_JWT_KEY": "thisisthemostsecurekeyintheworld",
+    "SENSOR_SERVICE_CLIENT_CODE": "xkOzRbcBNtJIHK0TPt1eRYkWm86D0E91pwIxHsIme4S",
+    "RAYGUN_API_KEY": "LvjJ/SZjyhbWCMnQEjwjVQ==",
+    "SENSOR_SERVICE_CLIENT_SECRET": "lPt3515VD7zDqpkCycpgIe7ZSavwh1ONpdWcRzM2Gbd2"
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "timeoutSeconds": 20,
+      "delaySeconds": 15,
+      "protocol": "MESOS_HTTP",
+      "path": "/v1/health",
+      "ipProtocol": "IPv4"
+    }
+  ],
+  "networks": [
+    {
+      "name": "dcos",
+      "mode": "container"
+    }
+  ],
+  "requirePorts": false,
+  "upgradeStrategy": {
+    "maximumOverCapacity": 1,
+    "minimumHealthCapacity": 0.5
+  },
+  "killSelection": "YOUNGEST_FIRST",
+  "unreachableStrategy": {
+    "inactiveAfterSeconds": 0,
+    "expungeAfterSeconds": 0
+  },
+  "fetch": [
+    {
+      "uri": "file:///etc/docker.tar.gz",
+      "extract": true,
+      "executable": false,
+      "cache": false
+    }
+  ]
+}

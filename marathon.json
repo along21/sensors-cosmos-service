@@ -1,0 +1,53 @@
+{
+  "id": "/sensor-cosmos-service",
+  "cmd": null,
+  "env": {
+    "SENSOR_SERVICE_CLIENT_CODE": "xkOzRbcBNtJIHK0TPt1eRYkWm86D0E91pwIxHsIme4S",
+    "SENSOR_SERVICE_CLIENT_SECRET": "lPt3515VD7zDqpkCycpgIe7ZSavwh1ONpdWcRzM2Gbd2",
+    "BIFROST_JWT_KEY": "$BIFROST_JWT_KEY",
+    "RAYGUN_API_KEY": "$RAYGUN_API_KEY",
+    "MESOS_URL": "$MESOS_URL"
+  },
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "$DOCKER_REGISTRY_URL/sensor-cosmos-service:$BUILD_TAG",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 9000,
+          "hostPort": 0,
+          "servicePort": 10006,
+          "protocol": "tcp",
+          "labels": {}
+        }
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": true
+    }
+  },
+  "healthChecks": [
+    {
+      "path": "/v1/health",
+      "protocol": "HTTP",
+      "portIndex": 0,
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 3,
+      "ignoreHttp1xx": false
+    }
+  ],
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 0.5,
+    "maximumOverCapacity": 1
+  },
+  "labels": {
+    "heimdall.path": "/sensors-cosmos",
+    "heimdall.options": "{\"forward_url\": \"$MESOS_URL/sensor-cosmos-service\"}",
+    "heimdall.host": "$MESOS_HOST",
+    "heimdall.filters": "[\"Bifrost.AddDBInfoHeader\",\"Bifrost.AddAppInfoHeader\"]"
+  }
+}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.codehaus.plexus:plexus-interactivity-api:1.0-alpha-4:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.plexus/plexus-interactivity-api/jars/plexus-interactivity-api-1.0-alpha-4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.plexus/plexus-interactivity-api/srcs/plexus-interactivity-api-1.0-alpha-4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

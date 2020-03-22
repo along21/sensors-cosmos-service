@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.maven.shared:maven-dependency-analyzer:1.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.shared/maven-dependency-analyzer/jars/maven-dependency-analyzer-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.shared/maven-dependency-analyzer/srcs/maven-dependency-analyzer-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

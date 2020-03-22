@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.maven.reporting:maven-reporting-impl:2.0.5:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.reporting/maven-reporting-impl/jars/maven-reporting-impl-2.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.maven.reporting/maven-reporting-impl/srcs/maven-reporting-impl-2.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
